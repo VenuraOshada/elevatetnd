@@ -84,8 +84,8 @@ const Contact: React.FC = () => {
         </svg>
       ),
       label: "Email",
-      value: "info@elevatetd.com",
-      href: "mailto:info@elevatetd.com",
+      value: "ielevatetand@gmail.com",
+      href: "mailto:elevatetand@gmail.com",
     },
     {
       icon: (
@@ -94,8 +94,8 @@ const Contact: React.FC = () => {
         </svg>
       ),
       label: "Phone",
-      value: "+94 XX XXX XXXX",
-      href: "tel:+94XXXXXXXX",
+      value: "+94 74 232 3437",
+      href: "tel:+94742323437",
     },
     {
       icon: (

@@ -19,8 +19,8 @@ const Footer: React.FC = () => {
         <div>
           <h4 className="mb-3 font-semibold text-white">Contact</h4>
           <ul className="space-y-2 text-sm">
-            <li>Email: info@elevatetd.com</li>
-            <li>Phone: +94 XX XXX XXXX</li>
+            <li>Email: elevatetand@gmail.com</li>
+            <li>Phone: +94 74 232 3437</li>
             <li>Location: Sri Lanka</li>
           </ul>
         </div>

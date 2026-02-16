@@ -1,26 +1,25 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Home from "./pages/Home"
-import About from "./pages/About"
-import Contact from "./pages/Contact"
-import Navbar from "./components/Navbar"
-import Footer from "./components/Footer"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
-const App: React.FC = () => {
+function App() {
   return (
-    <BrowserRouter>
-      <div className="flex min-h-screen flex-col">
+    <Router>
+      <div className="min-h-screen bg-white">
         <Navbar />
-        <main className="flex-1">
+        {/* Add responsive padding-top to account for fixed navbar - more space on mobile */}
+        <main className="pt-16 md:pt-20">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
-        <Footer />
       </div>
-    </BrowserRouter>
-  )
+    </Router>
+  );
 }
 
-export default App
+export default App;

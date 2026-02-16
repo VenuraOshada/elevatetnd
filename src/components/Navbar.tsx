@@ -57,7 +57,7 @@ const Navbar: React.FC = () => {
               <img
                 src={logo}
                 alt="Elevate T&D Logo"
-                className="h-16 w-auto md:h-18 transition-all duration-300"
+                className="h-32 w-auto md:h-18 transition-all duration-300"
               />
               {/* Glow effect on hover */}
               <div className="absolute inset-0 bg-blue-500/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />

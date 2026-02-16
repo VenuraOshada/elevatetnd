@@ -84,7 +84,7 @@ const Contact: React.FC = () => {
         </svg>
       ),
       label: "Email",
-      value: "ielevatetand@gmail.com",
+      value: "elevatetand@gmail.com",
       href: "mailto:elevatetand@gmail.com",
     },
     {

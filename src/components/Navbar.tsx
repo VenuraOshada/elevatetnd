@@ -260,7 +260,7 @@ const Navbar: React.FC = () => {
                       <span className="font-medium">elevatetand@gmail.com</span>
                     </a>
                     <a
-                      href="tel:+94XXXXXXXX"
+                      href="tel:+94742323437"
                       className="flex items-center gap-3 text-slate-600 hover:text-blue-600 transition-colors"
                     >
                       <div className="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center">

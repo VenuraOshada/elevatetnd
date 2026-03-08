@@ -5,24 +5,33 @@ import { Link } from "react-router-dom"
 
 type TrainingItem = {
   title: string
-  description: string
+  points: string[]
 }
 
 const trainings: TrainingItem[] = [
   {
-    title: "Advanced Corporate Pharmacy Practices",
-    description:
-      "A comprehensive training session focused on modern corporate pharmacy operations, compliance standards, and workflow optimization.",
+    title: "Medical Delegate Training",
+    points: [
+      "Develop strong product knowledge and scientific communication skills for pharmaceutical representatives.",
+      "Learn effective doctor engagement techniques and ethical promotion practices.",
+      "Improve sales presentation, objection handling, and relationship building with healthcare professionals.",
+    ],
   },
   {
-    title: "Pharmaceutical Compliance & Ethics",
-    description:
-      "Designed for corporate pharmacists to strengthen regulatory awareness, ethical practices, and professional accountability.",
+    title: "Sales Team Training",
+    points: [
+      "Strengthen modern sales strategies, negotiation techniques, and customer conversion skills.",
+      "Build confidence in client communication, prospecting, and closing deals.",
+      "Enhance team collaboration and performance through practical sales simulations.",
+    ],
   },
   {
-    title: "Leadership & Professional Growth",
-    description:
-      "A popular session aimed at developing leadership skills, communication, and decision-making in pharmaceutical environments.",
+    title: "Corporate Training",
+    points: [
+      "Healthy workforce for a healthy corporate future – programs focused on employee wellbeing and productivity.",
+      "Develop emotional intelligence to improve workplace communication, empathy, and conflict management.",
+      "Foster leadership and teamwork skills to build strong, motivated, and high-performing teams.",
+    ],
   },
 ]
 
@@ -156,33 +165,18 @@ const Home: React.FC = () => {
                       <h3 className="text-2xl font-bold text-slate-900 mb-4 pr-12 group-hover:text-blue-700 transition-colors duration-300">
                         {item.title}
                       </h3>
-                      <p className="text-slate-600 leading-relaxed text-base">
-                        {item.description}
-                      </p>
-
-                      {/* Animated arrow */}
-                      {/* <motion.div
-                        initial={{ opacity: 0, x: -10 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.4, delay: index * 0.15 + 0.5 }}
-                        className="mt-6 flex items-center gap-2 text-blue-600 font-semibold text-sm group-hover:gap-4 transition-all duration-300"
-                      >
-                        Learn More
-                        <svg
-                          className="w-5 h-5"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M17 8l4 4m0 0l-4 4m4-4H3"
-                          />
-                        </svg>
-                      </motion.div> */}
+                      
+                      {/* Bullet points */}
+                      <ul className="space-y-3">
+                        {item.points.map((point, pointIndex) => (
+                          <li key={pointIndex} className="flex items-start gap-3">
+                            <span className="flex-shrink-0 w-1.5 h-1.5 bg-blue-600 rounded-full mt-2"></span>
+                            <p className="text-slate-600 leading-relaxed text-base flex-1">
+                              {point}
+                            </p>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   </div>
                 </motion.div>

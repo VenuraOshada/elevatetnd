@@ -88,7 +88,7 @@ const HomeHero: React.FC = () => {
               className="mb-8 max-w-xl text-lg md:text-xl text-slate-200 leading-relaxed"
             >
               Elevate T&amp;D delivers professional training programs designed to
-              empower pharmacists in corporate and institutional environments.
+              empower employees knowledge, skills, attitudes and employee wellbeing.
             </motion.p>
 
             {/* CTA Buttons */}

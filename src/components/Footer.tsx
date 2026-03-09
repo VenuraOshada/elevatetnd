@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
             Elevate T&amp;D
           </h3>
           <p className="text-sm leading-relaxed">
-            Corporate pharmacist training programs focused on professional
+            Corporate training programs focused on professional
             growth, compliance, and industry best practices.
           </p>
         </div>
@@ -31,9 +31,9 @@ const Footer: React.FC = () => {
             Training Focus
           </h4>
           <ul className="space-y-2 text-sm">
-            <li>Corporate Pharmacy</li>
-            <li>Compliance & Ethics</li>
-            <li>Professional Development</li>
+            <li>Medical Delegate Training</li>
+            <li>Sales Team Training </li>
+            <li>Corporate Training</li>
           </ul>
         </div>
       </div>

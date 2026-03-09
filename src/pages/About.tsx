@@ -10,7 +10,7 @@ const About: React.FC = () => {
 
   const stats = [
     { value: "27+", label: "Years of Excellence", icon: "🏆" },
-    { value: "50+", label: "Professionals Trained", icon: "👥" },
+    { value: "200+", label: "Professionals Trained", icon: "👥" },
     { value: "100+", label: "Training Sessions", icon: "📚" },
     { value: "98%", label: "Client Satisfaction", icon: "⭐" },
   ];
@@ -108,9 +108,8 @@ const About: React.FC = () => {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="max-w-3xl mx-auto text-lg md:text-xl text-slate-300 leading-relaxed"
             >
-              Elevate T&amp;D specializes in structured corporate pharmacist
-              training, focusing on compliance, professional development, and
-              industry best practices.
+              Elevate T&amp;D specializes in structured corporate
+              training, focusing on healthy workforce for healthy corporate future, emotional intelligence, team work and leadership.
             </motion.p>
           </motion.div>
         </div>
@@ -234,7 +233,7 @@ const About: React.FC = () => {
                 className="absolute top-8 right-8 rounded-2xl bg-white/95 backdrop-blur-sm p-6 shadow-2xl border border-blue-100"
               >
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-blue-600 mb-1">50+</div>
+                  <div className="text-4xl font-bold text-blue-600 mb-1">200+</div>
                   <div className="text-slate-600 text-sm font-medium">Professionals Trained</div>
                 </div>
               </motion.div>
@@ -339,8 +338,8 @@ const About: React.FC = () => {
               </p>
 
               <p className="text-lg text-slate-600 leading-relaxed mb-8">
-                Our programs are designed by industry veterans who understand the unique challenges 
-                faced by corporate pharmacists. We focus on practical, real-world applications that 
+                Our programs are designed by an industry veteran who understand the unique challenges 
+                faced by corporate employees. We focus on practical, real-world applications that 
                 drive immediate value for your organization.
               </p>
             </motion.div>

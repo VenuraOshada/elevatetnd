@@ -126,7 +126,7 @@ const Home: React.FC = () => {
               <span className="block text-blue-600 mt-2">That Makes an Impact</span>
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Empowering pharmaceutical professionals with cutting-edge training solutions
+              Empowering professionals with cutting-edge training solutions
             </p>
           </motion.div>
 

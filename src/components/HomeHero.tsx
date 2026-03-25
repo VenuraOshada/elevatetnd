@@ -76,7 +76,7 @@ const HomeHero: React.FC = () => {
             >
               Elevating Corporate
               <span className="block mt-2 bg-gradient-to-r from-blue-400 via-blue-300 to-blue-500 bg-clip-text text-transparent">
-                Pharmacist Training
+               Training
               </span>
             </motion.h1>
 

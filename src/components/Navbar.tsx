@@ -7,7 +7,7 @@ const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
-  const [activeLink, setActiveLink] = useState(location.pathname);
+  const activeLink = location.pathname;
 
   // Handle scroll effect
   useEffect(() => {
@@ -19,11 +19,9 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Sync activeLink with route changes and scroll to top
+  // Scroll to top on route changes
   useEffect(() => {
-    setActiveLink(location.pathname);
-    setIsOpen(false);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, [location.pathname]);
 
   const navLinks = [
@@ -32,8 +30,7 @@ const Navbar: React.FC = () => {
     { to: "/contact", label: "Contact" },
   ];
 
-  const handleLinkClick = (to: string) => {
-    setActiveLink(to);
+  const handleLinkClick = () => {
     setIsOpen(false);
   };
 
@@ -57,7 +54,11 @@ const Navbar: React.FC = () => {
               <img
                 src={logo}
                 alt="Elevate T&D Logo"
-                className="h-32 w-auto md:h-18 transition-all duration-300"
+                width={180}
+                height={56}
+                loading="eager"
+                decoding="async"
+                className="h-12 w-auto max-w-[150px] object-contain sm:h-12 sm:max-w-[150px] md:h-14 md:max-w-[180px] transition-all duration-300"
               />
               {/* Glow effect on hover */}
               <div className="absolute inset-0 bg-blue-500/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
@@ -69,10 +70,10 @@ const Navbar: React.FC = () => {
             {navLinks.map((link) => {
               const isActive = activeLink === link.to;
               return (
-                <Link 
-                  key={link.to} 
-                  to={link.to} 
-                  onClick={() => handleLinkClick(link.to)}
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  onClick={() => handleLinkClick()}
                   className="relative group"
                 >
                   <motion.div
@@ -187,7 +188,7 @@ const Navbar: React.FC = () => {
                     >
                       <Link
                         to={link.to}
-                        onClick={() => handleLinkClick(link.to)}
+                        onClick={() => handleLinkClick()}
                         className={`block px-6 py-4 rounded-xl font-semibold text-base transition-all duration-300 ${
                           isActive
                             ? "bg-gradient-to-r from-blue-600 to-blue-500 text-white shadow-lg shadow-blue-500/30"
@@ -244,7 +245,10 @@ const Navbar: React.FC = () => {
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, delay: (navLinks.length + 1) * 0.1 }}
+                  transition={{
+                    duration: 0.3,
+                    delay: (navLinks.length + 1) * 0.1,
+                  }}
                   className="pt-6 border-t border-blue-100/50"
                 >
                   <div className="space-y-3 text-sm">
@@ -253,8 +257,18 @@ const Navbar: React.FC = () => {
                       className="flex items-center gap-3 text-slate-600 hover:text-blue-600 transition-colors"
                     >
                       <div className="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center">
-                        <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        <svg
+                          className="w-4 h-4 text-blue-600"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                          />
                         </svg>
                       </div>
                       <span className="font-medium">elevatetand@gmail.com</span>
@@ -264,8 +278,18 @@ const Navbar: React.FC = () => {
                       className="flex items-center gap-3 text-slate-600 hover:text-blue-600 transition-colors"
                     >
                       <div className="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center">
-                        <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        <svg
+                          className="w-4 h-4 text-blue-600"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                          />
                         </svg>
                       </div>
                       <span className="font-medium">+94 74 232 3437</span>
